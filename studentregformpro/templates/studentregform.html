@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" href="{% static 'css/studentreg.css' %}">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+
+
+
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="offset_md__3 col_md_6">
+            <form method="POST">
+                <h3 class="text_success">Student Registration Form</h3>
+                {% csrf_token %}
+                <label> RollNumber:</label>
+                <input type="number" name="roll" autocomplete="off" placeholder="Your RollNumber"><br/>
+                <label> Your Name:</label>
+                <input type="text" name="sname" autocomplete="off" placeholder="Your Name"><br/>
+                <label> Mobile Numbe:r</label>
+                <input type="number" name="mobilenumber" autocomplete="off" placeholder="mobile"><br/>
+                <label> Fee Amount:</label>
+                <input type="number" name="fee" value="2000" readonly><br/>
+                <label> Email ID:</label>
+                <input type="email" name="email" autocomplete="off" placeholder="Your Email"><br/>
+                <label> DateofBirth:</label>
+                <input type="date" name="dod"><br/>
+                <label> Gender:</label>
+                <input type="radio" name="gender" value="male" class="gets">Male<br/>
+                <label> Gender:</label>
+                 <input type="radio" name="gender" value="female" class="gets">Female<br/>
+                <label> Courses:</label>
+                <input type="checkbox" name="course" value="python">Python<br/>
+                <input type="checkbox" name="course" value="Django">Django<br/>
+                <input type="checkbox" name="course" value="UI">UI<br/>
+                <input type="checkbox" name="course" value="RestAPI">RestAPI<br/>
+                <label> institute Name:</label>
+                <select name="institute">
+                    <option value="durgasoft">Durgasoft</option>
+                    <option value="djangosoft">Djangoasoft</option>
+                    <option value="pythonsoft">Pythonasoft</option>
+                    <option value="uisoft">UIsoft</option>
+                </select></br>
+                <label>Address:</label>
+                <input type="text" name="address" autocomplete="off" placeholder="Address"><br/>
+                <input type="submit" value="submit" class="btn btn-success"><br/>
+                <input type="reset" value="clear" class="btn btn-danger"><br/>
+
+
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+form{
+    margin: 30px;
+}
+h3{
+    text-align: center;
+
+}
+input[name]{
+    width: 200;
+
+}
+label{
+    font-family: cursive;
+}
+gtr{
+    border: 2px red solid;
+}
+.gets{
+    border: 2px red solid;
+    word-spacing: -60;
+}
